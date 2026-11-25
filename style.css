@@ -1,0 +1,25 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root { --bg: #0a0805; --card: #14100a; --text: #f5f1e8; --muted: #a89880; --accent: #d4af37; --green: #22c55e; --red: #ef4444; }
+body { font-family: system-ui, sans-serif; background: linear-gradient(135deg, #0a0805 0%, #14100a 100%); color: var(--text); min-height: 100vh; display: flex; justify-content: center; padding: 2rem 1rem; }
+.app { width: 100%; max-width: 900px; }
+header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; }
+.logo { display: flex; align-items: center; gap: 1rem; }
+.logo-icon { font-size: 2rem; color: var(--accent); }
+.logo h1 { font-size: 1.4rem; }
+.logo p { color: var(--muted); font-size: 0.8rem; }
+.clock { font-size: 1.5rem; font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums; }
+.loading { text-align: center; padding: 3rem; color: var(--muted); }
+.error { background: rgba(239,68,68,0.1); border: 1px solid var(--red); color: var(--red); padding: 1rem; border-radius: 12px; text-align: center; }
+.hidden { display: none; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 2rem; }
+.card { background: var(--card); border: 1px solid rgba(212,175,55,0.15); border-radius: 14px; padding: 1.5rem; transition: 0.3s; }
+.card:hover { border-color: var(--accent); transform: translateY(-4px); }
+.card .name { display: flex; justify-content: space-between; font-weight: 600; margin-bottom: 0.5rem; }
+.card .symbol { color: var(--muted); text-transform: uppercase; font-size: 0.8rem; }
+.card .price { font-size: 1.8rem; font-weight: 700; margin-bottom: 0.5rem; }
+.card .change { font-weight: 600; font-size: 0.9rem; }
+.card .change.up { color: var(--green); }
+.card .change.down { color: var(--red); }
+.chart-container { background: var(--card); border: 1px solid rgba(212,175,55,0.15); border-radius: 14px; padding: 1.5rem; height: 350px; }
+footer { margin-top: 2rem; text-align: center; color: var(--muted); font-size: 0.85rem; }
+footer a { color: var(--accent); text-decoration: none; }
